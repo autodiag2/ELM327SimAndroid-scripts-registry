@@ -20,7 +20,7 @@ function response(req)
     if req[2] == 0x01 then
       return {0x67, 0x01, 0x00, 0x00}
     end
-    if req[1] == 0x02 and req[1] == 0x12 and req[2] == 0x34 then
+    if req[2] == 0x02 and req[3] == 0x12 and req[4] == 0x34 then
       return {0x7F, 0x27, 0x12}
     end
   end
