@@ -28,4 +28,5 @@ function response(req)
   if req[1] == 0x21 or req[1] == 0x18 or req[1] == 0x19 or req[1] == 0x30 then
     return {0x7F, req[1], 0x11}
   end  
+  return {}
 end
