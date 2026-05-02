@@ -8,8 +8,8 @@ function response(req)
     return { 0x41, 0x0C, math.floor(value / 256), value % 256 } 
   end
   -- supported PIDs
-  if req[1] == 0x00 or req[1] == 0x20 then
-    return { 0x41, req[1], 0xFF, 0xFF, 0xFF, 0xFF}
+  if req[1] == 0x01 and ( req[2] == 0x00 or req[2] == 0x20 ) then
+    return { 0x41, req[2], 0xFF, 0xFF, 0xFF, 0xFF}
   end
   -- vehicle specific command - unknown meaning
   if req[1] == 0x81 then
